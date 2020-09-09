@@ -8,15 +8,14 @@ import sys
 
 # Complete the angryProfessor function below.
 def angryProfessor(k, a):
-    n = len(a)
+    pcount = 0
+    for x in a:
+        if x >= 0:
+            pcount = pcount+1
 
-    if k > n:
-        return ''
-
-    neg_count = len(list(filter(lambda x: (x < 0), a)))
-    pos_count = len(list(filter(lambda x: (x >= 0), a)))
+    #pos_count = len(list(filter(lambda x: (x >= 0), a)))
     
-    if  pos_count >= k :
+    if  pcount >= k :
         return 'NO'
     else:
         return 'YES'
